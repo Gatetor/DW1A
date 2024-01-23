@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 public class Piloto {
-    
+
     private int licencia;
     private String nombre;
     private String apellido;
     private String nacionalidad;
     private ArrayList<Integer> puntos;
-    
+
     public Piloto(int licencia, String nombre, String apellido, String nacionalidad, ArrayList<Integer> puntos) {
         this.licencia = licencia;
         this.nombre = nombre;
@@ -58,20 +58,21 @@ public class Piloto {
 
     @Override
     public String toString() {
-        return  "Piloto " + licencia + 
-                "\n  nombre:" + nombre + " " + apellido + 
-                "\n  nacionalidad:" + nacionalidad + 
+        return "Piloto " + licencia +
+                "\n  nombre:" + nombre + " " + apellido +
+                "\n  nacionalidad:" + nacionalidad +
                 "\n  media:" + mediaPuntos();
     }
-    public double mediaPuntos(){
-        double media=0;
-        for(int p: puntos){
-            media+=p;
+
+    public double mediaPuntos() {
+        double media = 0;
+        for (int p : puntos) {
+            media += p;
         }
-        if (puntos.size()!=0) {
-            return media/puntos.size();
+        if (puntos.size() != 0) {
+            return media / puntos.size();
         }
         return 0;
     }
-    
+
 }
