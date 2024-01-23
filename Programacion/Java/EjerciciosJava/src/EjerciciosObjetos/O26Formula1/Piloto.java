@@ -1,5 +1,3 @@
-package EjerciciosObjetos.O26Formula1;
-
 import java.util.ArrayList;
 
 public class Piloto {
