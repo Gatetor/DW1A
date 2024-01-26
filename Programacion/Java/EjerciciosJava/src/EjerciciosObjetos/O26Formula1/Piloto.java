@@ -6,14 +6,14 @@ public class Piloto {
     private String nombre;
     private String apellido;
     private String nacionalidad;
-    private ArrayList<Integer> puntos;
+    private ArrayList<Integer> points;
 
-    public Piloto(int licencia, String nombre, String apellido, String nacionalidad, ArrayList<Integer> puntos) {
+    public Piloto(int licencia, String nombre, String apellido, String nacionalidad, ArrayList<Integer> points) {
         this.licencia = licencia;
         this.nombre = nombre;
         this.apellido = apellido;
         this.nacionalidad = nacionalidad;
-        this.puntos = puntos;
+        this.points = points;
     }
 
     public int getLicencia() {
@@ -32,8 +32,8 @@ public class Piloto {
         return nacionalidad;
     }
 
-    public ArrayList<Integer> getPuntos() {
-        return puntos;
+    public ArrayList<Integer> getpoints() {
+        return points;
     }
 
     public void setLicencia(int licencia) {
@@ -52,8 +52,8 @@ public class Piloto {
         this.nacionalidad = nacionalidad;
     }
 
-    public void setPuntos(ArrayList<Integer> puntos) {
-        this.puntos = puntos;
+    public void setpoints(ArrayList<Integer> points) {
+        this.points = points;
     }
 
     @Override
@@ -61,16 +61,16 @@ public class Piloto {
         return "Piloto " + licencia +
                 "\n  nombre:" + nombre + " " + apellido +
                 "\n  nacionalidad:" + nacionalidad +
-                "\n  media:" + mediaPuntos();
+                "\n  average:" + averagepoints();
     }
 
-    public double mediaPuntos() {
-        double media = 0;
-        for (int p : puntos) {
-            media += p;
+    public double averagepoints() {
+        double average = 0;
+        for (int p : points) {
+            average += p;
         }
-        if (puntos.size() != 0) {
-            return media / puntos.size();
+        if (points.size() != 0) {
+            return average / points.size();
         }
         return 0;
     }
